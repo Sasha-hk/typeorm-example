@@ -22,6 +22,7 @@ const main = async () => {
         Transaction,
       ],
       synchronize: true,
+      dropSchema: true,
     });
     console.log('[*] Connected to Postgres database')
 

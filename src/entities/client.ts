@@ -1,4 +1,4 @@
-import { Column, CreateDateColumn, Entity, JoinColumn, JoinTable, ManyToMany, OneToMany, UpdateDateColumn } from 'typeorm';
+import { Column, CreateDateColumn, Entity, JoinColumn, ManyToMany, OneToMany, UpdateDateColumn } from 'typeorm';
 import { Banker } from './banker';
 import { Transaction } from './transaction';
 import { Person } from './utils/person';
@@ -49,6 +49,12 @@ export class Client extends Person {
     nullable: true,
   })
   ttt: string;
+
+  @Column({
+    type: 'timestamp with time zone',
+    nullable: true,
+  })
+  t2: string;
 
   @CreateDateColumn()
   createdAt: Date;
